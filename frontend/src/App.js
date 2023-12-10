@@ -1,6 +1,6 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-function App() {
+function ClimbDeezWebAppContainer() {
   return (
     <div className="ClimbDeez-Container">
       <h1>ClimbDeez React App!</h1>
@@ -8,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default ClimbDeezWebAppContainer;
