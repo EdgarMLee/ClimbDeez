@@ -3,14 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development", // development or production, determined by node env
-  entry: "./index.js", // entry file
+  entry: "./index.tsx", // entry file
   devtool: "inline-source-map", // dev tool
   output: {
     path: path.resolve(__dirname, "public"), // output path
     filename: "main.js",
     clean: true,
   },
-  // setting "node" as target app (server side), and setting it as "web" is
   target: "web",
   devServer: {
     port: "3000", // dev server port
@@ -25,35 +24,46 @@ module.exports = {
     liveReload: true, // disable live reload on the browser. "hot" must be set to false for this to work
   },
   resolve: {
-    /** "extensions"
-     * If multiple files share the same name but have different extensions, webpack will
-     * resolve the one with the extension listed first in the array and skip the rest.
-     * This is what enables users to leave off the extension when importing
-     */
-    extensions: [".tsx", ".ts", ".js", ".jsx", ".json"],
+    extensions: ["*", ".tsx", ".ts", ".js", ".jsx", ".json"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "Output MANAGEMENTT",
+      template: "./public/index.html",
     }),
   ],
   module: {
-    /** "rules"
-     * This says - "Hey webpack compiler, when you come across a path that resolves to a '.js or .jsx'
-     * file inside of a require()/import statement, use the babel-loader to transform it before you
-     * add it to the bundle. And in this process, kindly make sure to exclude node_modules folder from
-     * being searched"
-     */
     rules: [
       {
-        test: /\.(js|jsx)$/, //kind of file extension this rule should look for and apply in test
-        exclude: /node_modules/, //folder to be excluded
-        use: "babel-loader", //loader which we are going to use
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
+          },
+        },
       },
       {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ["csv-loader"],
       },
     ],
   },

@@ -1,10 +1,13 @@
 {
-  // a preset is a set of plugins used to support particular language features.
-  // The two presets Babel uses by default: es2015, react
   "presets": [
     "@babel/preset-env", //compiling ES2015+ syntax
-    "@babel/preset-react" //for react
+    "@babel/preset-react", // for react
+    "@babel/preset-typescript" // ts
   ],
-  "plugins": ["@babel/plugin-transform-runtime"]
-  // Babel's code transformations are enabled by applying plugins (or presets) to your configuration file.
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-react-jsx-development",
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-transform-arrow-functions"
+  ]
 }
