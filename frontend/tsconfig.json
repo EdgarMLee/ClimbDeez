@@ -13,8 +13,21 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "*": [
+        "./src/fortress/abstract/containers/*",
+        "./src/fortress/flytrap/pages/*",
+        "./src/fortress/buttons/*"
+      ]
+    }
   },
+  "strict": false,
+  "plugins": [
+    {
+      "name": "typescript-strict-plugin"
+    }
+  ],
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

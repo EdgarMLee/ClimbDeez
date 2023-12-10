@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import SimpleButton from "./ui_library/buttons/SimpleButton";
+import SimpleButton from "./fortress/buttons/SimpleButton";
 function ClimbDeezWebAppContainer() {
   return (
     <div className="ClimbDeez-Container">

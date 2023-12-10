@@ -9,6 +9,7 @@
     "dev-server": "webpack ",
     "build": "webpack --config webpack.config.js --mode production",
     "test": "cross-env NODE_ENV=test jest tests/",
+    "ts-strict": "tsc && tsc-strict",
     "lint": ""
   },
   "keywords": [],
@@ -26,6 +27,7 @@
     "node-env": "^0.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router": "^6.20.1",
     "react-router-dom": "^6.20.1",
     "uuid": "^9.0.1",
     "webpack-dev-server": "^4.15.1",
@@ -61,6 +63,7 @@
     "ts-jest": "^29.1.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
+    "typescript-strict-plugin": "^2.2.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-merge": "^5.10.0"

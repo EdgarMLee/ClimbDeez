@@ -24,7 +24,7 @@ module.exports = {
     liveReload: true, // disable live reload on the browser. "hot" must be set to false for this to work
   },
   resolve: {
-    extensions: ["*", ".tsx", ".ts", ".js", ".jsx", ".json"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".json"],
   },
   plugins: [
     new HtmlWebpackPlugin({
