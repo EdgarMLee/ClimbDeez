@@ -9,6 +9,7 @@ function ClimbDeezWebAppContainer() {
         onClickFn={() => null}
         onHoverFn={() => null}
       />
+      <a href="https://github.com/EdgarMLee/ClimbDeez/">GitHub</a>
     </div>
   );
 }
