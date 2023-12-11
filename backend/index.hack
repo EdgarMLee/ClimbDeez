@@ -1,5 +1,3 @@
-<?hh // strict
-
 require_once('vendor/autoload.php');
 
 use type Facebook\HackRouter\{Route, Router};
