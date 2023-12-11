@@ -5,7 +5,18 @@ enum VScale {
   V3 = "V3",
   V4 = "V4",
   V5 = "V5",
-  // add more later, goes up to 17
+  V6 = "V6",
+  V7 = "V7",
+  V8 = "V8",
+  V9 = "V9",
+  V10 = "V10",
+  V11 = "V11",
+  V12 = "V12",
+  V13 = "V13",
+  V14 = "V14",
+  V15 = "V15",
+  V16 = "V16",
+  V17 = "V17",
 }
 
 enum FrenchScale {
