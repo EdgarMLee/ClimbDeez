@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const cors = require("cors"); // Middleware for enabling Cross-Origin Resource Sharing (CORS).
 const helmet = require("helmet"); // Middleware for securing HTTP headers.
 const dotenv = require("dotenv");
+const ClimberRouter = require("./routers/climberRouter.js");
 
 // Load environment variables from .env file
 dotenv.config();
@@ -24,6 +25,7 @@ ClimbDeezWebExpressServer.get("/", (req, res) => {
   res.send("Welcome to my API!");
 });
 
+ClimbDeezWebExpressServer.use("/climber", ClimberRouter);
 // Start the server, everything happens here
 ClimbDeezWebExpressServer.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
