@@ -1,4 +1,4 @@
-import { GradeScaleType } from "../../types/routes";
+import { GradeScaleType } from "../../types/grades";
 export class ClimbDeezRouteBase {
   grade: GradeScaleType;
   constructor(grade: GradeScaleType) {

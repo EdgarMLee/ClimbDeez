@@ -10,3 +10,5 @@ type AbstractFlexLayoutPropsType = {
 const AbstractFlexLayout = (props: AbstractFlexLayoutPropsType): ReactNode => {
   return <div className="AbstractFlexLayout">{props.children}</div>;
 };
+
+export default AbstractFlexLayout;
