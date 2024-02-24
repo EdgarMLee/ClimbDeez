@@ -1,0 +1,11 @@
+{
+  "require": {
+    "hhvm": "*",
+    "hhvm/hackrouter": "^4.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "src/"
+    }
+  }
+}
